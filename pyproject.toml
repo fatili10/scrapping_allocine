@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "test-scrap"
+version = "0.1.0"
+description = ""
+authors = ["Fatima EL JATTIOUI <fjattioui@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+scrapy = "^2.11.2"
+azure-storage-blob = "^12.20.0"
+python-dotenv = "^1.0.1"
+psycopg2-binary = "^2.9.9"
+sqlalchemy = "^2.0.31"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
