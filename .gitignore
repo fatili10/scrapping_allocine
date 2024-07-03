@@ -1,0 +1,6 @@
+# Ignorer l'environnement virtuel créé par poetry
+.venv/
+poetry.lock
+pyproject.toml
+# Ignorer le fichier .env dans le répertoire alloscrap
+alloscrap/.env
