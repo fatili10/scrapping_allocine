@@ -157,6 +157,14 @@ class DatabasePipeline:
         self.create_tables()
 
     def create_tables(self):
+        # Supprime les tables si elles existent déjà
+        self.cursor.execute('''
+            DROP TABLE IF EXISTS film_actor;
+            DROP TABLE IF EXISTS film_director;
+            DROP TABLE IF EXISTS films;
+            DROP TABLE IF EXISTS actors;
+            DROP TABLE IF EXISTS directors;
+        ''')
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS films (
                 id SERIAL PRIMARY KEY,

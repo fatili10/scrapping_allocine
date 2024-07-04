@@ -13,7 +13,7 @@ from alloscrap.items import AllocineItem
 class AllocineSpiderSpider(CrawlSpider):
     name = "allocine_spider"
     allowed_domains = ["allocine.fr"]
-    start_urls = [f"https://www.allocine.fr/film/meilleurs/?page={n}" for n in range(1,2)]
+    start_urls = [f"https://www.allocine.fr/film/meilleurs/?page={n}" for n in range(1,15)]
 
     rules = [Rule(LinkExtractor(restrict_xpaths="//h2/a"), callback='parse_item', follow=False),]
     #rules = (Rule(LinkExtractor(allow=('/film/fichefilm_gen_cfilm=.*.html',)), callback='parse_item', follow=True),
